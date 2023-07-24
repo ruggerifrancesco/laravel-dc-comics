@@ -30,12 +30,9 @@
                                 <td>{{ $comic['price'] }}</td>
                                 <td>{{ $comic['type'] }}</td>
                                 <td>
-                                    <button type="button" class="btn btn-warning">
+                                    <a href="{{ route('admin.comic.show', ['id' => $comic['id']]) }}" class="btn btn-warning">
                                         <i class="fa-solid fa-eye"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-info">
-                                        <i class="fa-solid fa-circle-info"></i>
-                                    </button>
+                                    </a>
                                     <button type="button" class="btn btn-danger">
                                         <i class="fa-solid fa-trash"></i>
                                     </button>
