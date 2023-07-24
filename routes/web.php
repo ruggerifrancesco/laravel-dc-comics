@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminPageController;
 use App\Http\Controllers\Admin\ComicsController;
-use App\Http\Controllers\PageController;
+use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
