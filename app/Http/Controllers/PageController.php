@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function home () {
-        return view('home');
+        return view('guest.home');
     }
 
     public function indexComics () {
-        return view('comics-index');
+        return view('guest.index');
     }
 }
