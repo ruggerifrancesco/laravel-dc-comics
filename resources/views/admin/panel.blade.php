@@ -3,7 +3,9 @@
 @section('title', 'Admin Panel')
 
 @section('main-content')
-    <h1>
-        Panello Generale Admin
-    </h1>
+    <main class="admin-panel-container">
+        <h1 class="text-center">
+            Panello Generale Admin
+        </h1>
+    </main>
 @endsection

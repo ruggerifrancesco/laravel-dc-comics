@@ -45,18 +45,18 @@ a {
 
     li {
         position: relative;
-    
+
         a {
             font-family: 'Oswald', sans-serif;
             font-size: 1.1rem;
             text-transform: uppercase;
             color: $secondary-color;
-            
+
             &.active {
                 color: $primary-color;
             }
         }
-      
+
         &.active::after {
             content: '';
             height: 5px;
@@ -125,17 +125,17 @@ main {
 
     .card-img {
         aspect-ratio: 1/1;
-        
+
         img {
             object-fit: cover;
             object-position: top;
         }
-    
+
         &:hover {
             transform: scale(1.05);
         }
     }
-    
+
     h5 {
         font-family: 'Lato', sans-serif;
         text-transform: uppercase;
@@ -169,7 +169,7 @@ main {
 
 .store-context {
     @include flex (row, none, center);
-    
+
     .store-label {
         color: white;
         text-transform: uppercase;
@@ -199,7 +199,7 @@ footer {
 .list-container {
 
     &:first-of-type {
-        margin-bottom: 1.4rem;  
+        margin-bottom: 1.4rem;
     }
 
     li a {
@@ -236,7 +236,7 @@ h4 {
 }
 
 .miscellaneous-wrapper {
-   @include flex (row, space-between, center); 
+   @include flex (row, space-between, center);
 }
 
 #signUp-btn {
@@ -268,3 +268,11 @@ h4 {
 .socialImg-icon:hover {
     filter: brightness(0) invert(1);
 }
+
+
+// Admin Panel
+.admin-panel-container {
+    height: 100vh;
+    @include flex(column, center, center);
+}
+
