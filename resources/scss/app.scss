@@ -1,1 +1,270 @@
 @import "~bootstrap/scss/bootstrap";
+
+@import './partials/_mixins.scss';
+@import './partials/_variables.scss';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+// General Tags
+* {
+    // outline: 1px solid red;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+ul, ol {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    @include page-wrapper ();
+    position: relative;
+}
+
+// Header Section
+.my_page-logo {
+    width: 100px;
+}
+
+.my_list-nav {
+    @include flex (row, none, center);
+    gap: 2rem;
+
+    li {
+        position: relative;
+    
+        a {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            color: $secondary-color;
+            
+            &.active {
+                color: $primary-color;
+            }
+        }
+      
+        &.active::after {
+            content: '';
+            height: 5px;
+            background-color: $primary-color;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: -3.8rem;
+        }
+    }
+}
+
+.my_header {
+    background-color: $header;
+}
+
+.my_hero-section {
+    background-image: url('../img/jumbotron.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+.wrapper-header {
+    @include flex (row, space-between, center);
+    padding: 1.5rem 0;
+}
+
+
+// Main Section
+main {
+    color: white;
+    background-color: $main-app-bg;
+}
+
+.wrapper-main {
+    @include flex (column, none, center);
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+}
+
+.series-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.series-section-title {
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    background-color: $primary-color;
+    padding: 0.6rem 2rem;
+
+    h2 {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: 'Oswald', sans-serif;
+        margin-bottom: 0;
+    }
+}
+
+.card-item {
+    width: calc((100% / 6) - 2rem);
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+
+    .card-img {
+        aspect-ratio: 1/1;
+        
+        img {
+            object-fit: cover;
+            object-position: top;
+        }
+    
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    
+    h5 {
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        color: white;
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+.my_store-nav {
+    background-color: $digital-navigation;
+    padding: 3rem 0;
+
+    .wrapper {
+        @include flex (row, space-around, center);
+    }
+}
+
+.buy-store-section {
+
+    img {
+        width: 4rem;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+    }
+
+    &:hover {
+        transform: scale(1.05)
+    }
+}
+
+.store-context {
+    @include flex (row, none, center);
+    
+    .store-label {
+        color: white;
+        text-transform: uppercase;
+        font-family: "Lato", sans-serif;
+        margin-left: 1rem;
+    }
+}
+
+
+#load-more-btn {
+    font-family: 'Oswald', sans-serif;
+    border-radius: 0;
+    text-transform: uppercase;
+    padding: 0.5rem 5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+// Footer Section
+footer {
+    background-image: url('../img/footer-bg.jpg');
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.list-container {
+
+    &:first-of-type {
+        margin-bottom: 1.4rem;  
+    }
+
+    li a {
+        color: $footer-links;
+        font-size: 0.92rem;
+    }
+}
+
+h4 {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.main-footer {
+    padding: 2.5rem 0;
+    overflow: hidden;
+}
+
+.background-logo {
+    position: absolute;
+    top: -6rem;
+    right: 0;
+}
+
+.links-wrapper {
+    @include flex (row, none, flex-start);
+    gap: 3rem;
+}
+
+.miscellaneous-footer {
+    background-color: $second-footer-bg;
+    padding: 2rem 0;
+}
+
+.miscellaneous-wrapper {
+   @include flex (row, space-between, center); 
+}
+
+#signUp-btn {
+    color: white;
+    border-radius: 0;
+    border-width: 3px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.socials-container {
+    @include flex (row, none, center);
+}
+
+.social-title {
+    color: $primary-color;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    margin-right: 1.5rem;
+}
+
+.socials-list {
+    @include flex (row, none, center);
+    gap: 1rem;
+}
+
+.socialImg-icon:hover {
+    filter: brightness(0) invert(1);
+}
