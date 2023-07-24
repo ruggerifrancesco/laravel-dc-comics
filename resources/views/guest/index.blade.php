@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Comics Index')
+@section('title', 'Comics Display')
 
 @section('main-content')
     <div class="wrapper wrapper-main">

@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 // Guest Side Client
 Route::get('/', [PageController::class, 'home'])->name('guest.home');
-Route::get('/comics', [PageController::class, 'indexComics'])->name('guest.comics.index');
+Route::get('/comics', [PageController::class, 'index'])->name('guest.comics.index');
 
 
 // Admin Side Client

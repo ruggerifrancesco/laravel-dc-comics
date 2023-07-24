@@ -5,11 +5,16 @@
         </div>
         <nav>
             <ul class="my_list-nav">
-                @foreach (config('navlinks') as $item)
-                    <li>
-                        <a href="{{ $item['href'] }}">{{ $item['item'] }}</a>
-                    </li>
-                @endforeach
+                <li>
+                    <a href="{{ route('guest.home') }}">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('guest.comics.index') }}">
+                        Comics Display
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
