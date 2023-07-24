@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminPageController;
+use App\Http\Controllers\Admin\ComicsController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +20,4 @@ Route::get('/', [PageController::class, 'home'])->name('guest.home');
 Route::get('/comics', [PageController::class, 'indexComics'])->name('guest.comics.index');
 
 Route::get('/admin', [AdminPageController::class, 'adminHome'])->name('admin.home'); // Panello Gnerale Admin
-Route::get('/admin/comics', [AdminPageController::class, 'adminComicsIndex'])->name('admin.comics.index'); // Vista Lista Comics Admin
+Route::resource('/admin/comics', ComicsController::class);
