@@ -16,8 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// Guest Side Client
 Route::get('/', [PageController::class, 'home'])->name('guest.home');
 Route::get('/comics', [PageController::class, 'indexComics'])->name('guest.comics.index');
 
-Route::get('/admin', [AdminPageController::class, 'adminHome'])->name('admin.home'); // Panello Gnerale Admin
-Route::resource('/admin/comics', ComicsController::class);
+
+// Admin Side Client
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [AdminPageController::class, 'adminHome'])->name('home'); // Panello Generale Admin
+    Route::resource('/comics', ComicsController::class); // Risorsa Comics * Only for ADMIN
+});
