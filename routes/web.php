@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PageController::class, 'home'])->name('guest.home');
 Route::get('/comics', [PageController::class, 'indexComics'])->name('guest.comics.index');
 
-Route::get('/admin', [AdminPageController::class, ''])->name('admin.home');
-Route::get('/admin/comics', [AdminPageController::class, ''])->name('admin.comics.index');
+Route::get('/admin', [AdminPageController::class, 'adminHome'])->name('admin.home'); // Panello Gnerale Admin
+Route::get('/admin/comics', [AdminPageController::class, 'adminComicsIndex'])->name('admin.comics.index'); // Vista Lista Comics Admin
