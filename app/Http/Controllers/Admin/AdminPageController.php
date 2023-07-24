@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class AdminPageController extends Controller
 {
-    public function adminHome () {
+    public function home () {
         return view('admin.panel');
     }
 }
