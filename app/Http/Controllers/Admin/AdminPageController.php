@@ -12,9 +12,14 @@ class AdminPageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function adminHome ()
     {
-        //
+        return view('admin.panel');
+    }
+    
+    public function adminComicsIndex ()
+    {
+        return view('admin.comics-index');
     }
 
     /**
