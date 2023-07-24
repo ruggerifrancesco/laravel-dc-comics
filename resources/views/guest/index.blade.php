@@ -11,19 +11,19 @@
         <div class="series-wrapper">
 
             <!-- Comics Item -->
-            {{-- @foreach ($comics as $comic) --}}
-                {{-- <article class="card-item"> --}}
-                    {{-- <div class="card-img"> --}}
-                        {{-- <a href="#"> --}}
-                            {{-- <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }} Series"> --}}
-                        {{-- </a> --}}
-                    {{-- </div> --}}
+            @foreach ($comicsIndex as $comic)
+                <article class="card-item">
+                    <div class="card-img">
+                        <a href="#">
+                            <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }} Series">
+                        </a>
+                    </div>
 
-                    {{-- <div class="card-infos"> --}}
-                        {{-- <h5>{{ $comic['series'] }}</h5> --}}
-                    {{-- </div> --}}
-                {{-- </article> --}}
-            {{-- @endforeach --}}
+                    <div class="card-infos">
+                        <h5>{{ $comic['series'] }}</h5>
+                    </div>
+                </article>
+            @endforeach
         </div>
 
         <button type="button" class="btn btn-primary" id="load-more-btn">
