@@ -35,7 +35,7 @@ a {
 }
 
 // Header Section
-.my_page-logo {
+.my_page-logo, .admin_page-logo {
     width: 100px;
 }
 
@@ -272,7 +272,7 @@ h4 {
 
 // Admin Panel
 .admin-panel-container {
-    height: 100vh;
+    height: calc(100vh - 120px);
     @include flex(column, center, center);
 }
 
@@ -295,3 +295,20 @@ h4 {
     border-radius: 0.2rem;
 }
 
+.admin_header {
+    height: 120px;
+    @include flex (row, flex-start, center);
+
+    .admin_brand {
+        @include flex (row, flex-start, center);
+
+        span {
+            margin-left: 2rem;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            color: $secondary-color;
+        }
+    }
+
+}

@@ -15,6 +15,12 @@
                         Comics Display
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('admin.home') }}">
+                        Admin Panel
+                    </a>
+                </li>
+
             </ul>
         </nav>
     </div>
