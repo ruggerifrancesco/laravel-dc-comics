@@ -5,7 +5,7 @@
 @section('main-content')
 <main class="admin-panel-container">
     <div class="container">
-        <form action="" method="POST">
+        <form action="{{ route('admin.comics.store') }}" method="POST">
             @csrf
 
             <div class="row">
