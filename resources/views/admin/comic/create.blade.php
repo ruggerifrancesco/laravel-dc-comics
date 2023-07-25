@@ -74,7 +74,7 @@
 
 
             <button type="submit" class="btn btn-primary">
-                Create new pokemon
+                Create new comic
             </button>
             <button type="reset" class="btn btn-warning">
                 Reset fields
