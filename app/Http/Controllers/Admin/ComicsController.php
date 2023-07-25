@@ -44,7 +44,7 @@ class ComicsController extends Controller
         $newStoreComic->fill($comicsCreateData);
         $newStoreComic->save();
 
-        return redirect()->route('admin.comics', $newStoreComic->id);
+        return redirect()->route('admin.comics.index', $newStoreComic->id);
     }
 
     /**
