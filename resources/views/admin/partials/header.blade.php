@@ -9,7 +9,7 @@
         <nav>
             <ul class="my_list-nav">
                 <li>
-                    <a href="{{ route('guest.home') }}">
+                    <a href="{{ route('admin.comics.create') }}">
                         <i class="fa-solid fa-plus"></i>
                         Crea un nuovo comic
                     </a>
