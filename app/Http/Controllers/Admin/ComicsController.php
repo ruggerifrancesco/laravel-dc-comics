@@ -68,7 +68,13 @@ class ComicsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comics = Comic::findOrFail($id);
+
+        // if (is_array($comics->artists)) {
+            // $comics->artists = implode(', ', $comics->artists);
+        // }
+
+        return view('admin.comic.edit', compact('comics'));
     }
 
     /**
