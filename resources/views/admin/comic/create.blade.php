@@ -5,6 +5,8 @@
 @section('main-content')
 <main class="admin-panel-container">
     <div class="container">
+
+        <h3 class="text-center mb-5">Create New Comic</h3>
         <form action="{{ route('admin.comics.store') }}" method="POST">
             @csrf
 
