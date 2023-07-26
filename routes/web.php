@@ -26,5 +26,4 @@ Route::get('/comics', [PageController::class, 'index'])->name('guest.comics.inde
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminPageController::class, 'home'])->name('home'); // Panello Generale Admin
     Route::resource('/comics', ComicsController::class); // Risorsa Comics * Only for ADMIN
-    Route::get('/comics/{id}', [ComicsController::class, 'show'])->name('comic.show');
 });
