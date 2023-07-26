@@ -6,8 +6,8 @@
     <main class="admin-panel-container">
         <div class="container">
 
-            <h3 class="text-center mb-5">Updated {{ $comics->title }} Comic</h3>
-            <form action="{{ route('admin.comics.store') }}" method="POST">
+            <h3 class="text-center mb-5">Updated {{ $comic->title }} Comic</h3>
+            <form action="{{ route('admin.comics.update', ['comic' => $comic->id]) }}" method="POST">
                 @csrf
                 @method('PUT')
 
@@ -18,28 +18,28 @@
                                 Title
                             </label>
                             <input type="text" class="form-control" id="title"
-                                name="title" value="{{ $comics->title }}" required>
+                                name="title" value="{{ $comic->title }}" required>
                         </div>
                         <div class="mb-3">
                             <label for="price" class="form-label">
                                 Price
                             </label>
                             <input type="text" class="form-control" id="price"
-                                name="price" value="{{ $comics->price }}" required >
+                                name="price" value="{{ $comic->price }}" required >
                         </div>
                         <div class="mb-3">
                             <label for="series" class="form-label">
                                 Serie
                             </label>
                             <input type="text" class="form-control" id="series"
-                                name="series" value="{{ $comics->series }}" required>
+                                name="series" value="{{ $comic->series }}" required>
                         </div>
                         <div class="mb-3">
                             <label for="sale_date" class="form-label">
                                 Sale Date
                             </label>
                             <input type="date" class="form-control" id="sale_date"
-                                name="sale_date" value="{{ $comics->sale_date }}" required>
+                                name="sale_date" value="{{ $comic->sale_date }}" required>
                         </div>
                     </div>
 
@@ -49,28 +49,28 @@
                                 Image url
                             </label>
                             <input type="text" class="form-control" id="thumb"
-                                name="thumb" value="{{ $comics->thumb }}" required>
+                                name="thumb" value="{{ $comic->thumb }}" required>
                         </div>
                         <div class="mb-3">
                             <label for="type" class="form-label">
                                 Type
                             </label>
                             <input type="text" class="form-control" id="type"
-                                name="type" value="{{ $comics->type }}" required>
+                                name="type" value="{{ $comic->type }}" required>
                         </div>
                         <div class="mb-3">
                             <label for="artists" class="form-label">
                                 Artist/s
                             </label>
                             <input type="text" class="form-control" id="artists"
-                                name="artists" value="{{ is_array($comics->artists) ? implode(', ', $comics->artists) : $comics->artists }}">
+                                name="artists" value="{{ is_array($comic->artists) ? implode(', ', $comic->artists) : $comic->artists }}">
                         </div>
                         <div class="mb-3">
                             <label for="writers" class="form-label">
                                 Writer/s
                             </label>
                             <input type="text" class="form-control" id="writers"
-                                name="writers" value="{{ is_array($comics->writers) ? implode(', ', $comics->writers) : $comics->writers }}">
+                                name="writers" value="{{ is_array($comic->writers) ? implode(', ', $comic->writers) : $comic->writers }}">
                         </div>
                     </div>
                 </div>
@@ -79,15 +79,12 @@
                     <label for="description" class="form-label">
                         Description
                     </label>
-                    <textarea class="form-control" name="description" id="description" rows="10" required>{{ $comics->description }}</textarea>
+                    <textarea class="form-control" name="description" id="description" rows="10" required>{{ $comic->description }}</textarea>
                 </div>
 
 
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-success">
                     Edit comic
-                </button>
-                <button type="reset" class="btn btn-warning">
-                    Reset fields
                 </button>
 
             </form>
