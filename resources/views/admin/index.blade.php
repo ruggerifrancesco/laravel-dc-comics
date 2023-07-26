@@ -33,9 +33,12 @@
                                     <a href="{{ route('admin.comic.show', ['id' => $comic['id']]) }}" class="btn btn-warning">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
-                                    <button type="button" class="btn btn-danger">
+                                    <a href="{{ route('admin.comics.edit', ['comic' => $comic['id']]) }}" class="btn btn-info">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </a>
+                                    <a type="button" class="btn btn-danger">
                                         <i class="fa-solid fa-trash"></i>
-                                    </button>
+                                    </a>
                                 </td>
                             </tr>
                         @endforeach
