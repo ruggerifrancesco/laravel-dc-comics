@@ -21,7 +21,7 @@
                 <li>
                     <a href="{{ route('admin.comics.create') }}">
                         <i class="fa-solid fa-plus"></i>
-                        Crea un nuovo comic
+                        Add new Comic
                     </a>
                 </li>
             </ul>

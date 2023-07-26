@@ -18,7 +18,7 @@
                         <th scope="col">Serie</th>
                         <th scope="col">Price</th>
                         <th scope="col">Type</th>
-                        <th scope="col">Actions</th>
+                        <th scope="col" class="text-center">Actions</th>
                       </tr>
                     </thead>
                     <tbody class="table-group-divider">
@@ -29,16 +29,18 @@
                                 <td>{{ $comic['series'] }}</td>
                                 <td>{{ $comic['price'] }}</td>
                                 <td>{{ $comic['type'] }}</td>
-                                <td>
+                                <td class="d-flex gap-2 justify-content-center">
                                     <a href="{{ route('admin.comic.show', ['id' => $comic['id']]) }}" class="btn btn-warning">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
                                     <a href="{{ route('admin.comics.edit', ['comic' => $comic['id']]) }}" class="btn btn-info">
                                         <i class="fa-solid fa-pen"></i>
                                     </a>
-                                    <a type="button" class="btn btn-danger">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </a>
+                                    <form action="" method="post">
+                                        <a type="button" class="btn btn-danger">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </a>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
