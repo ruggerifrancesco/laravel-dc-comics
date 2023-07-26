@@ -7,8 +7,13 @@
     <div class="container">
 
     <div class="card border-warning text-bg-dark mb-3">
-        <div class="card-header">
-            Serie: {{ $comics->series }}
+        <div class="card-header d-flex justify-content-between">
+            <span>
+                Serie: {{ $comics->series }}
+            </span>
+            <span>
+                Type: {{ $comics->type }}
+            </span>
         </div>
         <div class="row g-0">
           <div class="col-md-5 thumb-container">
@@ -40,8 +45,13 @@
             </div>
           </div>
         </div>
-        <div class="card-footer">
-            Type: {{ $comics->type }}
+        <div class="card-footer d-flex gap-2 justify-content-end">
+            <a href="" class="btn btn-info">
+                <i class="fa-solid fa-pen"></i>
+            </a>
+            <a type="button" class="btn btn-danger">
+                <i class="fa-solid fa-trash"></i>
+            </a>
         </div>
       </div>
 </main>
