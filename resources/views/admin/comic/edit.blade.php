@@ -5,6 +5,7 @@
 @section('main-content')
     <main class="admin-panel-container">
         <div class="container">
+
             <h3 class="text-center mb-5">Updated {{ $comics->title }} Comic</h3>
             <form action="{{ route('admin.comics.store') }}" method="POST">
                 @csrf
@@ -62,14 +63,14 @@
                                 Artist/s
                             </label>
                             <input type="text" class="form-control" id="artists"
-                                name="artists" value="{{ $comics->artists }}" required>
+                                name="artists" value="{{ is_array($comics->artists) ? implode(', ', $comics->artists) : $comics->artists }}">
                         </div>
                         <div class="mb-3">
                             <label for="writers" class="form-label">
                                 Writer/s
                             </label>
                             <input type="text" class="form-control" id="writers"
-                                name="writers" required>
+                                name="writers" value="{{ is_array($comics->writers) ? implode(', ', $comics->writers) : $comics->writers }}">
                         </div>
                     </div>
                 </div>
@@ -78,8 +79,7 @@
                     <label for="description" class="form-label">
                         Description
                     </label>
-                    <textarea class="form-control" name="description" id="description" cols="30" rows="10" required>
-                    </textarea>
+                    <textarea class="form-control" name="description" id="description" rows="10" required>{{ $comics->description }}</textarea>
                 </div>
 
 
