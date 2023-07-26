@@ -9,7 +9,7 @@
         <nav>
             <ul class="my_list-nav">
                 <li>
-                    <a href="{{ route('admin.comics.create') }}">
+                    <a href="{{ route('admin.home') }}">
                         Control Panel
                     </a>
                 </li>
