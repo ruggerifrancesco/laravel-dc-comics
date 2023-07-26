@@ -46,7 +46,7 @@
           </div>
         </div>
         <div class="card-footer d-flex gap-2 justify-content-end">
-            <a href="" class="btn btn-info">
+            <a href="{{ route('admin.comics.edit', ['comic' => $comics->id]) }}" class="btn btn-info">
                 <i class="fa-solid fa-pen"></i>
             </a>
             <a type="button" class="btn btn-danger">
