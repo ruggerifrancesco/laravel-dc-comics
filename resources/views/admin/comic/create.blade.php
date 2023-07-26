@@ -70,8 +70,7 @@
                 <label for="description" class="form-label">
                     Description
                 </label>
-                <textarea class="form-control" name="description" id="description" cols="30" rows="10" required>
-                </textarea>
+                <textarea class="form-control" name="description" id="description" cols="30" rows="10" required></textarea>
             </div>
 
 
