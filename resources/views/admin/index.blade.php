@@ -36,10 +36,13 @@
                                     <a href="{{ route('admin.comics.edit', ['comic' => $comic['id']]) }}" class="btn btn-info">
                                         <i class="fa-solid fa-pen"></i>
                                     </a>
-                                    <form action="" method="post">
-                                        <a type="button" class="btn btn-danger">
+                                    <form action="{{ route('admin.comics.destroy', $comic->id) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+
+                                        <button type="submit" class="btn btn-danger">
                                             <i class="fa-solid fa-trash"></i>
-                                        </a>
+                                        </button>
                                     </form>
                                 </td>
                             </tr>
@@ -52,5 +55,11 @@
                 {!! $comicsIndex->links() !!}
             </div>
         </div>
+
+        @if (session('delete'))
+            <div class="alert alert-success m-0">
+                Comic {{ session('delete')}} has been deleted successfully!
+            </div>
+        @endif
     </main>
 @endsection
