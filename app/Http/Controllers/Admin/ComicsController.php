@@ -55,9 +55,9 @@ class ComicsController extends Controller
      */
     public function show($id)
     {
-        $comics = Comic::findOrFail($id);
+        $comic = Comic::findOrFail($id);
 
-        return view('admin.comic.show', compact('comics'));
+        return view('admin.comic.show', compact('comic'));
     }
 
     /**
@@ -99,6 +99,9 @@ class ComicsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        $comic->delete();
+
+        return redirect()->route('admin.comics.index')->with('delete', $comic->title);
     }
 }
